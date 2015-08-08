@@ -1,0 +1,21 @@
+<head>
+    <title>Meteor 101 Camera</title>
+</head>
+
+<body>
+<h1>Welcome to Meteor 101!</h1>
+
+{{> hello}}
+</body>
+
+<template name="hello">
+    <button>Take photo</button>
+    <p>
+        {{#each pictures}}
+             <div>
+                 <img data-id={{_id}} class="picture"  src="{{pic}}"/><br>
+                 <span>{{time}}</span>
+             </div>
+        {{/each}}
+    </p>
+</template>
