@@ -1,0 +1,20 @@
+<head>
+    <title>CamareDemo</title>
+</head>
+
+<body>
+<h1>Welcome to Meteor!</h1>
+
+{{> hello}}
+</body>
+
+<template name="hello">
+    <button>Click Me</button>
+    <br>
+    {{#each pictures}}
+        <div>
+            <img data_id={{_id}} class="small-image" src="{{pic}}">
+            <span><br>{{time}}</span>
+        </div>
+    {{/each}}
+</template>
