@@ -5,11 +5,11 @@ Template.hello.events
         alert(e.message)
       else
         myColl.insert {time: new Date(), 'pic': r}
-
-  'click img.small-image':(e,t)->
-    if confirm '确认删除吗？'
-      id=e.target.getAttribute 'data_id'
-      myColl.remove id
+#
+#  'click img.small-image':(e,t)->
+#    if confirm '确认删除吗？'
+#      id=e.target.getAttribute 'data_id'
+#      myColl.remove id
 
 Template.hello.helpers
   pictures: ->
