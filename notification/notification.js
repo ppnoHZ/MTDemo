@@ -15,13 +15,13 @@ if (Meteor.isClient) {
             if (Meteor.isCordova)
             {
                 alert("notification");
-
+                Message.show();
             }
             if(Meteor.isClient)
             {
                 Message.log("通知");
             }
-            Message.show();
+
             //Session.set('counter', Session.get('counter') + 1);
         }
     });
