@@ -1,0 +1,15 @@
+<template name="baiduMap">
+    <!--    <div id="iCenter" style="height: 80%;width: 80%">
+        </div>-->
+    <div id="container">
+        <!--<a href="http://api.map.baidu.com/marker?location={{loc.lat}},{{loc.lng}}&title=我的位置&content=百度奎科大厦&output=html">Map</a>-->
+
+        <!--<img style="margin:2px" width="400" height="300"
+             src="http://api.map.baidu.com/staticimage?center={{loc.lng}},{{loc.lat}}&width=400&height=300&zoom=11&markers={{loc.lng}},{{loc.lat}}&markerStyles=l,位置"/>-->
+    </div>
+    <button>定位</button>
+
+    {{#if error}}
+        <p>Error: {{error}}</p>
+    {{/if}}
+</template>

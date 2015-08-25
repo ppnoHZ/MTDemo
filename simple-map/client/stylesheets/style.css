@@ -1,0 +1,50 @@
+html {
+    height: 100%
+}
+
+body {
+    height: 100%;
+    margin: 0px;
+    padding: 0px
+}
+
+#container {
+    height: 80%;
+    width: 80%;
+}
+#mapContainer{
+    position: absolute;
+    top:0;
+    left: 0;
+    right:0;
+    bottom:0;
+}
+#tip{
+    min-height:65px;
+    background-color:#fff;
+    padding-left:10px;
+    padding-right:10px;
+    position:absolute;
+    font-size:12px;
+    right:10px;
+    bottom:20px;
+    border-radius:3px;
+    line-height:18px;
+    border:1px solid #ccc;
+}
+
+#tip input[type='button']{
+    margin-left: 10px;
+    margin-right:10px;
+    margin-top:10px;
+    background-color: #0D9BF2;
+    height:30px;
+    text-align:center;
+    line-height:30px;
+    color:#fff;
+    font-size:12px;
+    border-radius:3px;
+    outline: none;
+    border:0;
+    float:right;
+}
