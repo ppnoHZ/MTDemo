@@ -15,14 +15,19 @@ if (Meteor.isClient) {
       // increment the counter when button is clicked
       if (Meteor.isCordova)
       {
-        alert("notification");
-        Message.show();
+        //alert("notification");
+        var data={
+          id:Session.get('counter'),
+          title:"系统通知",
+          text:"已发货！"
+        };
+        Message.show(data);
       }
       if(Meteor.isClient)
       {
         Message.log("通知");
+        //alert("notification");
       }
-
       Session.set('counter', Session.get('counter') + 1);
     }
   });
