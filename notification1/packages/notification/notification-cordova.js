@@ -5,10 +5,12 @@
 Message.show = function (data) {
     cordova.plugins.notification.local.hasPermission(function (granted) {
         console.log('Permission has been granted: ' + granted);
-    });
-
-    cordova.plugins.notification.local.registerPermission(function (granted) {
-        console.log('Permission has been granted: ' + granted);
+        if(!granted)
+        {
+            cordova.plugins.notification.local.registerPermission(function (granted) {
+                console.log('Permission has been granted: ' + granted);
+            });
+        }
     });
 
     //console.log(cordova.plugins.notification.local);
