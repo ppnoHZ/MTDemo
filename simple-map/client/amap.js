@@ -51,11 +51,13 @@ Template.amap.events({
     "click #watchPosition": function () {
         watchPosition();
     },
-
     "click #getPosition": function () {
 
         console.log("getPosition");
         getCurrentPosition();
+    },
+    "click #baiduMap": function () {
+        Router.go("baiduMap");
     }
 })
 

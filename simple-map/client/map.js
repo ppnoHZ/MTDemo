@@ -58,7 +58,7 @@ Template.baiduMap.helpers({
 ;
 
 Template.baiduMap.events({
-    "click button": function () {
+    "click #bdlocation": function () {
         //getLocation();
         //百度地图定位
         var geolocation = new BMap.Geolocation();
@@ -69,7 +69,6 @@ Template.baiduMap.events({
                     console.log(r);
                     var gpsPoint = new BMap.Point(r.point.lng, r.point.lat);
                     markinMap(gpsPoint,"转换前");
-
                     /*BMap.Convertor.translate(gpsPoint, 2, translateCallback); */    //真实经纬度转成百度坐标
                 }, 2000);
             } else {
@@ -92,6 +91,9 @@ Template.baiduMap.events({
         }*/
 
         //alert(Geolocation.latLng());
+    },
+    "click #gdlocation": function () {
+        Router.go("/");
     }
 });
 

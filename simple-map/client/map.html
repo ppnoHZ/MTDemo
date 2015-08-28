@@ -7,17 +7,16 @@
         <!--<img style="margin:2px" width="400" height="300"
              src="http://api.map.baidu.com/staticimage?center={{loc.lng}},{{loc.lat}}&width=400&height=300&zoom=11&markers={{loc.lng}},{{loc.lat}}&markerStyles=l,位置"/>-->
     </div>
-    <button>定位</button>
-
-    {{#if error}}
-        <p>Error: {{error}}</p>
-    {{/if}}
+    <div id="tip">
+        <input id="bdlocation" type="button" value="定位"/>
+        <input id="gdlocation" type="button" value="高德定位"/>
+       <!-- {{#if error}}
+            <p>Error: {{error}}</p>
+        {{/if}}-->
+    </div>
 </template>
 
 
 <template name="layout">
-
-    <h1>定位Demo</h1>
-
     {{> yield}}
 </template>
