@@ -3,6 +3,6 @@
  */
 
 
-Message.log= function (data) {
+Message.show= function (data) {
     console.log(data);
 }

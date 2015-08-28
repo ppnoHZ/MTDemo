@@ -8,7 +8,7 @@ Message.show = function (data) {
         id: data.id,
         title: data.title,
         text: data.text,
-        data: {key: "data.id"}
+        data: data.data
     });
 };
 
@@ -26,7 +26,7 @@ Meteor.startup(function () {
         alert(notification.id);
         alert(JSON.stringify(notification));
         //alert(JSON.stringify(notification.data));
-        alert(JSON.parse(notification.data).key);
+        alert(JSON.parse(notification.data));
         //showToast('id:' + notification.id);
     });
 })

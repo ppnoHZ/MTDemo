@@ -19,8 +19,8 @@ Package.onUse(function(api) {
   api.export('Message');
   api.versionsFrom('1.1.0.3');
   api.addFiles('notification.js',['client']);
-  api.addFiles('web.js', ['client']);
-  api.addFiles('notification-cordova.js', ['client']);
+  api.addFiles('notification-web.js', ['web.browser']);
+  api.addFiles('notification-cordova.js', ['web.cordova']);
 });
 
 /*Package.onTest(function(api) {
