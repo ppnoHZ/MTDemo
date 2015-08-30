@@ -14,47 +14,57 @@
 
 #projectName=${project}
 
-projectName=${project}
+for var in $*
+do
+	#     
+	currentDir=$(pwd)
 
-apkName=${projectName}.apk
+	projectName=$var
 
-buildPath=/Users/ID/Build/${projectName}
+	projectDir=${currentDir}/${projectName}
 
-buildApkPath=${buildPath}/android/unaligned.apk
+	apkName=${projectName}.apk
 
-apkPath=${buildPath}/android/${apkName}
+	buildPath=${currentDir}/Build/${projectName}
 
-serverUrl=192.168.3.104:3000
+	buildApkPath=${buildPath}/android/unaligned.apk
 
-keyName=Demo
+	apkPath=${buildPath}/android/${apkName}
 
-androidBuildToolpath=~/.meteor/android_bundle/android-sdk/build-tools/20.0.0/
-#-----------------------------------------------------------------------------
+	serverUrl=192.168.3.104:3000
+ 
+	keyName=Demo
 
+	androidBuildToolpath=~/.meteor/android_bundle/android-sdk/build-tools/20.0.0/
+	#-----------------------------------------------------------------------------
+	#echo ${currentDir}
+	echo "------ building...." ${projectName}
+	echo "------buildPath" ${buildPath}
+	echo "------apkPath"  ${apkPath}
+	echo "------apkName"  ${apkName}
+	echo "------serverUrl" ${serverUrl}
 
-echo "------building...."
-echo "------buildPath" ${buildPath}
-echo "------apkPath"  ${apkPath}
-echo "------apkName"  ${apkName}
-echo "------serverUrl" ${serverUrl}
+	#read d
+	#echo "$d"
 
-#read d
-#echo "$d"
+	cd ${projectDir}
 
-meteor build --directory  ${buildPath} --server ${serverUrl}
+	meteor build --directory  ${buildPath} --server ${serverUrl}
 
-jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 ${apkPath} ${keyName}
-
-
-
-
-#if [-f ${apkPath}]; then
-#    rm -rf ${apkPath}
-#fi
-
-rm -rf ${apkPath}
+	jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 ${apkPath} ${keyName}
 
 
-${androidBuildToolpath}zipalign 4   ${buildApkPath} ${apkPath}
 
-echo "done!"
+
+	#if [-f ${apkPath}]; then
+	#    rm -rf ${apkPath}
+	#fi
+
+	rm -rf ${apkPath}
+
+
+	${androidBuildToolpath}zipalign 4   ${buildApkPath} ${apkPath}
+
+	echo ${projectName} "done!"
+
+done
