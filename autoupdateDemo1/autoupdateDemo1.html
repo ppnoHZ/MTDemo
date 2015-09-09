@@ -3,12 +3,14 @@
 </head>
 
 <body>
-  <h1>Welcome to Meteor 0</h1>
+  <h1>app version 1</h1>
 
   {{> hello}}
 </body>
 
 <template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+    <button>Click Me</button>
+    <p>You've pressed the button {{counter}} times.</p>
+    {{> meteorStatus}}
+
 </template>

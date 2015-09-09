@@ -1,0 +1,1 @@
+ meteor run android-device --mobile-server 192.168.3.104:3000
