@@ -3,13 +3,15 @@
 </head>
 
 <body>
-  <h1>app version 1</h1>
+  <h1>app version 5</h1>
 
   {{> hello}}
 </body>
 
 <template name="hello">
     <button>Click Me</button>
+    <p>Reload.isWaitingForResume()= {{reload}}
+    </p>
     <p>You've pressed the button {{counter}} times.</p>
     {{> meteorStatus}}
 

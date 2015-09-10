@@ -5,6 +5,9 @@ if (Meteor.isClient) {
   Template.hello.helpers({
     counter: function () {
       return Session.get('counter');
+    },
+    reload: function () {
+      return Reload.isWaitingForResume();
     }
   });
 

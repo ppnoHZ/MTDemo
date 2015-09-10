@@ -6,6 +6,7 @@
 // Used in order to not get browser cross browser origin errors
 // Typically you want to get more specific than this
 App.accessRule("*");
+App.accessRule('192.168.3.104');
 App.info({
     //id: 'com.stark.rsc.demo',
     name: '日升昌',

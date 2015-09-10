@@ -9,3 +9,4 @@ autopublish
 insecure
 webapp
 255kb:meteor-status
+mdg:reload-on-resume
