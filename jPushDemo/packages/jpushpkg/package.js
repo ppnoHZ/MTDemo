@@ -10,7 +10,6 @@ Package.describe({
     documentation: 'README.md'
 });
 Cordova.depends({
-    "com.phonegap.jpushplugin": "1.5.4"
 });
 
 Package.onUse(function (api) {

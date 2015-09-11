@@ -15,19 +15,20 @@ if (Meteor.isClient) {
       if (Meteor.isCordova)
       {
         //alert("notification");
-        var data={
+    /*    var data={
           id:Session.get('counter'),
           title:"系统通知",
           text:"已发货！"
-        };
-        Message.show(data);
+        };*/
+        Message.show();
       }
-      if(Meteor.isClient)
+     /* if(Meteor.isClient)
       {
         Message.log("通知");
         //alert("notification");
-      }
-      Session.set('counter', Session.get('counter') + 1);
+      }*/
+      //Session.set('counter', Session.get('counter') + 1);
+      //Session.set('counter', Session.get('counter') + 1);
     }
   });
 }

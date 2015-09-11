@@ -1,4 +1,5 @@
 if (Meteor.isClient) {
+
   // counter starts at 0
   Session.setDefault('counter', 0);
 
@@ -10,9 +11,12 @@ if (Meteor.isClient) {
 
   Template.hello.events({
     'click button': function () {
-      // increment the counter when button is clicked
 
-      Jpush.localNotification();
+      // increment the counter when button is clicked
+      if(Meteor.isCordova) {
+
+      }
+      //Jpush.localNotification();
       Session.set('counter', Session.get('counter') + 1);
     }
   });
@@ -21,5 +25,7 @@ if (Meteor.isClient) {
 if (Meteor.isServer) {
   Meteor.startup(function () {
     // code to run on server at startup
+
+
   });
 }

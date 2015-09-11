@@ -4,5 +4,5 @@
 
 
 Message.show= function (data) {
-    console.log(data);
+    //console.log(data);
 }
