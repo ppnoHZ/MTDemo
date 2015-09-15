@@ -1,14 +1,16 @@
 <head>
-  <title>barcodeScannerDemo</title>
+    <title>barcodeScannerDemo</title>
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
+<h1>Welcome to Meteor!</h1>
 
-  {{> hello}}
+{{> hello}}
 </body>
 
 <template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+    <button id="btnRecognition">识别</button>
+    <button id="btnGeneration">生成</button>
+
+    <p>You've pressed the button {{counter}} times.</p>
 </template>
