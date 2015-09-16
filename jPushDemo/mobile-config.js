@@ -6,7 +6,6 @@
 // Used in order to not get browser cross browser origin errors
 // Typically you want to get more specific than this
 App.accessRule("*");
-
 App.info({
     id: 'com.stark.rsc.demo',
     name: '日升昌',
@@ -15,7 +14,6 @@ App.info({
     email: 'contact@example.com',
     website: '192.168.3.104:3000'
 });
-//
 App.configurePlugin('cn.cordova.jpush', {
     JPUSH_APPKEY: 'a919927bbe2989544f338897'
 });
