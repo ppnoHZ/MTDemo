@@ -33,7 +33,7 @@ do
 
 	serverUrl=192.168.3.104:3000
  
-	keyName=Demo
+	keyName=RSC
 
 	androidBuildToolpath=~/.meteor/android_bundle/android-sdk/build-tools/20.0.0/
 	#-----------------------------------------------------------------------------

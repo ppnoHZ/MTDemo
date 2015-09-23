@@ -8,7 +8,7 @@
 App.accessRule("*");
 
 App.info({
-    id: 'com.stark.rsc.demo',
+    id: 'com.rsc.rsc365',
     name: '日升昌',
     description: '大宗商品交易',
     author: '斯塔克',
